@@ -1,0 +1,33 @@
+<html>
+{% load staticfiles %}
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Myblog</title>
+    <link rel="stylesheet" href="{% static 'lib/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/pygments/github.css' %}">
+</head>
+<body>
+<div id="header">
+    <div id="header-warp">
+        <ul id="header-nav">
+            <li><a href="{% url 'blog:index' %}">GONGQINGLING'S BLOG</a></li>
+        </ul>
+        <div id="header-right" class="login">
+            <div id="user-info">
+                <h id="dropdown-button">welcome</h>
+            </div>
+        </div>
+    </div>
+</div>
+{% block content %}{% endblock %}
+<div id="footer" class="noselect">
+    <ul id="ft-links">
+        <li><a href="" target="_blank">Friendship link one</a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="{% static 'blog/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
